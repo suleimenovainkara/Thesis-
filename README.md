@@ -52,6 +52,12 @@ The selected styles provide significant visual diversity and allow evaluation of
 - PostgreSQL database
 - Streamlit web interface
 
+## Architecture
+![Architecture](images/Web%20Application%20Architecture.png)
+
+## Database Schema
+![ER Diagram](images/ER%20Diagram.png)
+
 ## Author
 
 Inkara Suleimenova
