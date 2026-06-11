@@ -5,7 +5,7 @@ The diploma thesis titled «Development of an Intelligent Recommendation System 
 ## Technologies
 
 - Python
-- CLIP
+- CLIP 
 - Streamlit
 - PostgreSQL
 - FastAPI
@@ -16,6 +16,38 @@ The diploma thesis titled «Development of an Intelligent Recommendation System 
 - presentation/ – defense presentation
 - code/ – source code
 - data/ – scripts for dataset and embedding
+
+## Dataset
+The project uses the WikiArt dataset from Kaggle:
+
+Dataset: https://www.kaggle.com/datasets/steubk/wikiart
+
+For the experiments, a subset of artworks from the following artistic styles was selected:
+
+Art Nouveau (Modern)
+Baroque
+Cubism
+Early Renaissance
+Expressionism
+Fauvism
+High Renaissance
+Impressionism
+Mannerism (Late Renaissance)
+Pointillism
+Pop Art
+Post-Impressionism
+Realism
+Rococo
+Romanticism
+
+The selected styles provide significant visual diversity and allow evaluation of the recommendation system across different artistic movements.
+
+- Content-based recommendation system
+- CLIP image embeddings
+- Artwork similarity search
+- FastAPI backend
+- PostgreSQL database
+- Streamlit web interface
 
 ## Author
 
