@@ -7,7 +7,7 @@ The diploma thesis titled «Development of an Intelligent Recommendation System 
 - Python
 - CLIP
 - Streamlit
-- SQL
+- PostgreSQL
 - FastAPI
 
 ## Repository Structure
