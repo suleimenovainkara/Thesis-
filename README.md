@@ -2,13 +2,39 @@
 
 The diploma thesis titled «Development of an Intelligent Recommendation System for Museum Exhibits» focuses on the design and development of a recommendation system aimed at personalizing the user experience in digital museum environments. Special attention is given to the use of image embeddings and machine learning methods for analyzing visual characteristics of artworks. During the study, modern approaches in recommender systems and computer vision were analyzed. A key feature of the developed system is the use of the CLIP model for generating embeddings and computing similarity between artworks, which enables the formation of personalized and visually relevant recommendations.
 
-## Repository Structure
+## Business Problem
 
-- thesis/ – diploma thesis
-- presentation/ – defense presentation
-- code/ – source code
-- data/ – scripts for dataset and embedding
-- images/ - system architecture, ER diagram, workflow schemes, and results
+Digital museums often contain thousands of artworks, making it difficult for visitors to discover exhibits aligned with their interests. Traditional browsing methods rely on manual filtering, search, or curator-defined categories.
+
+This project addresses this challenge by automatically recommending artworks based on visual similarity and user preferences, helping visitors explore collections in a more personalized and engaging way.
+
+## Project Objectives
+
+- Develop a content-based recommendation system for museum exhibits.
+- Apply computer vision techniques to artwork analysis.
+- Explore the effectiveness of image embeddings for similarity search.
+- Build a complete end-to-end recommendation platform.
+- Improve artwork discovery and user engagement in digital museum environments.
+
+## Key Features
+
+- Content-based recommendation system
+- CLIP image embeddings
+- Artwork similarity search
+- FastAPI backend
+- PostgreSQL database
+- Streamlit web interface
+
+## Architecture
+![Architecture](images/Web%20Application%20Architecture.png)
+
+The system consists of the following components:
+
+- Image processing and embedding generation using CLIP.
+- PostgreSQL database for storing artworks, users, and embeddings.
+- Recommendation engine for similarity search and personalization.
+- FastAPI backend providing API endpoints.
+- Streamlit frontend for user interaction.
 
 ## Dataset
 The project uses the WikiArt dataset from Kaggle:
@@ -54,34 +80,36 @@ This project uses **CLIP** due to its high-level semantic understanding and stro
 | Zero-shot Capability | Yes | No |
 | Similarity Quality | High | Lower |
 
-## Key Features
-
-- Content-based recommendation system
-- CLIP image embeddings
-- Artwork similarity search
-- FastAPI backend
-- PostgreSQL database
-- Streamlit web interface
-
-## Architecture
-![Architecture](images/Web%20Application%20Architecture.png)
-
 ## Database Schema
 ![ER Diagram](images/ER%20Diagram.png)
 
-## How It Works
+## Recommendation Scenarios
 
-### Scenario 1 — Similar Artwork Search
+### Scenario 1 - Similar Artwork Search
 ![Scenario 1](images/Scheme%20of%20first%20scenario%20of%20recommendation%20system.%20Similar%20Artwork%20Search.png)
 
-A user uploads an image → CLIP generates an embedding → 
-the system finds the most visually similar artworks in the database.
+A user uploads an artwork image.
 
-### Scenario 2 — Personalized Recommendations
+The system:
+
+1. Generates a CLIP embedding.
+2. Searches for nearest neighbors in the embedding space.
+3. Returns visually similar artworks from the database.
+
+This functionality enables intuitive artwork discovery based purely on visual characteristics.
+
+### Scenario 2 - Personalized Recommendations
 ![Scenario 2](images/Scheme%20of%20second%20scenario%20of%20recommendation%20system.%20Personalized%20Recommendations.png)
 
-Based on the user's favorites, the system builds a preference 
-profile and recommends artworks from similar styles and periods.
+The system analyzes artworks marked as favorites by the user.
+
+Based on these preferences:
+
+1. A user profile embedding is created.
+2. Similar artworks are identified.
+3. Personalized recommendations are generated.
+
+This approach allows recommendations to adapt to individual artistic preferences.
 
 ## Results
 
@@ -93,6 +121,15 @@ profile and recommends artworks from similar styles and periods.
 
 ### Personal Recommendations
 ![Recommendations](images/Personal%20Recommendation%20Page%20Result.png)
+
+## Repository Structure
+
+- thesis/ – diploma thesis
+- presentation/ – defense presentation
+- code/ – source code
+- data/ – scripts for dataset and embedding
+- images/ - system architecture, ER diagram, workflow schemes, and results
+
 
 ## Technologies
 
